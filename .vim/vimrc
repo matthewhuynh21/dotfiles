@@ -1,0 +1,39 @@
+" call plugins
+call plug#begin('~/.vim/plugged')
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'jiangmiao/auto-pairs'
+Plug 'morhetz/gruvbox'
+Plug 'vim-latex/vim-latex'
+Plug 'powerline/powerline-fonts'
+call plug#end()
+
+set tabstop=4 " number of visual spaces per TAB
+set shiftwidth=4 " indent corresponds to a single tab
+set number " line numbers
+set noshowmode " don't show mode at the bottom line
+set cursorline " highlight current line
+set wildmenu " visual autocomplete for command menu
+set lazyredraw " redraw only when needed
+set showmatch " highlight matching ([{}])
+set incsearch " search as characters are entered
+set hlsearch " highlight matches " turn off search highlight
+nnoremap <leader>h :nohlsearch<CR> 
+inoremap <C-L> <esc> 
+syntax on
+set background=dark
+color gruvbox
+let g:airline_powerline_fonts = 1
+map <F6> :setlocal spell! spelllang=en_us<CR> " Set F6 to spellcheck
+" change j and k to move visual lines
+nnoremap j gj
+nnoremap k gk
+map <F7> :tabn<CR> " Set F7 to switch to right tab
+map <F8> :tabp<CR> " Set F8 to switch to left tab
+
+" LaTeX file settings
+autocmd Filetype tex setl updatetime=1000
+" put \begin{} \end{} tags tags around the current word
+autocmd Filetype tex inoremap <C-B> <Esc>Yo<++><Esc>pkkI\begin{<Esc>A}<Esc>jjI\end{<Esc>A}<Esc>kkA
+" placeholders
+"autocmd Filetype tex inoremap <C-j> <Esc>/<++><CR><Esc>cf>
