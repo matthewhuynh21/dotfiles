@@ -1,0 +1,64 @@
+\documentclass{article}
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{amsthm, amsmath, amssymb, physics, tikz-cd}
+\usepackage{url, graphicx, tabularx, array, geometry}
+
+\pagestyle{plain}
+
+\setlength{\parskip}{1ex} %--skip lines between paragraphs
+\setlength{\parindent}{0pt} %--don't indent paragraphs
+
+%-- Commands for header
+\renewcommand{\title}[1]{\textbf{#1}\\}
+\renewcommand{\line}{\begin{tabularx}{\textwidth}{X>{\raggedleft}X}\hline\\\end{tabularx}\\[-0.25cm]}
+\newcommand{\leftright}[2]{\begin{tabularx}{\textwidth}{X>{\raggedleft}X}#1%
+& #2\\\end{tabularx}\\[-0.25cm]}
+
+%\linespread{2} %-- Uncomment for Double Space
+
+% amsthm stuff
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{exer}{Exercise}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{claim}{Claim}
+% shortcuts 
+\newcommand{\F}{{\mathbb{F}}}
+\newcommand{\R}{{\mathbb{R}}}
+\newcommand{\C}{{\mathbb{C}}}
+\newcommand{\Q}{{\mathbb{Q}}}
+\newcommand{\Z}{{\mathbb{Z}}}
+\newcommand{\N}{{\mathbb{N}}}
+\newcommand{\A}{{\mathbb{A}}}
+\newcommand{\?}{\stackrel{?}{=}}
+\newcommand{\normal}{\ensuremath\triangleleft}
+\newcommand{\actson}{\ensuremath\curvearrowright\ }
+\let\ol\overline
+\let\mc\mathcal
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\vspan}{span}
+% make enumerate start with lower case letters
+\renewcommand{\theenumi}{(\alph{enumi})}
+% restriction command
+\newcommand\restr[2]{{% we make the whole thing an ordinary symbol
+  \left.\kern-\nulldelimiterspace % automatically resize the bar with \right
+  #1 % the function
+  \vphantom{\big|} % pretend it's a little taller at normal size
+  \right|_{#2} % this is the delimiter
+  }}
+
+\begin{document}
+\title{<++>}
+\line
+\leftright{\today}{Matthew Huynh (mh52735)} %-- left and right positions in the header
+
+<++>
+
+\end{document}
